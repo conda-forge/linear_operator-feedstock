@@ -18,6 +18,9 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools
+    - setuptools-scm
+    - wheel
   run:
     - python >=3.8
     - pytorch >=1.11
@@ -34,6 +37,7 @@ test:
     - pip
   commands:
     - pip check
+    - python -c "import linear_operator; print(linear_operator.__version__)"
 
 about:
   home: https://github.com/cornellius-gp/linear_operator
