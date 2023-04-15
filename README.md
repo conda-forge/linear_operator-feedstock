@@ -1,11 +1,11 @@
-About linear_operator
-=====================
+About linear_operator-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/linear_operator-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/cornellius-gp/linear_operator
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/linear_operator-feedstock/blob/main/LICENSE.txt)
 
 Summary: A LinearOperator implementation to wrap the numerical nuts and bolts of GPyTorch
 
