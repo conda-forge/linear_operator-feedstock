@@ -1,5 +1,5 @@
 {% set name = "linear_operator" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -20,11 +20,12 @@ requirements:
     - pip
     - setuptools
     - setuptools_scm
-    - wheel
   run:
     - python >=3.8
+    - jaxtyping >=0.2.9
     - pytorch >=1.11
     - scipy
+    - typeguard ~=2.13.3
 
 test:
   imports:
@@ -51,3 +52,4 @@ extra:
   recipe-maintainers:
     - AdrianSosic
     - ngam
+    - thewchan
