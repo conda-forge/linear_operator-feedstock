@@ -147,4 +147,5 @@ Feedstock Maintainers
 
 * [@AdrianSosic](https://github.com/AdrianSosic/)
 * [@ngam](https://github.com/ngam/)
+* [@thewchan](https://github.com/thewchan/)
 
