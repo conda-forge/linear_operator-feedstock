@@ -1,5 +1,5 @@
 {% set name = "linear_operator" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 64d5fabd81bc77b3c84af966087bd2fae07b41a7c3823f28cfab49f3066fed1f
+  sha256: 5cd9099bca5b9f1e57017a4153526df7410561a46aedd47096c8da642159b90d
 
 build:
   noarch: python
