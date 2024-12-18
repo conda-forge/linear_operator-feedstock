@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 16122661cd8b8a89ea965c845f650affe0f688f315893bb8dfa1182f148a1a41
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
     - setuptools_scm
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - jaxtyping ==0.2.19
     - pytorch >=1.11
     - scipy
@@ -36,6 +36,7 @@ test:
     - linear_operator.utils
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - python -c "import linear_operator; print(linear_operator.__version__)"
