@@ -1,5 +1,6 @@
 {% set name = "linear_operator" %}
-{% set version = "0.5.3" %}
+{% set version = "0.6" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 16122661cd8b8a89ea965c845f650affe0f688f315893bb8dfa1182f148a1a41
+  sha256: a9e2663879f1a2b28631bf7ef34892c4e5749893e711c8ef0ab0a39aff70a654
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -20,10 +21,11 @@ requirements:
     - pip
     - setuptools
     - setuptools_scm
+    - wheel
   run:
     - python >={{ python_min }}
-    - jaxtyping ==0.2.19
-    - pytorch >=1.11
+    - jaxtyping
+    - pytorch >=2.0
     - scipy
     - mpmath >=0.19,<=1.3
 
