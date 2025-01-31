@@ -1,5 +1,6 @@
 {% set name = "linear_operator" %}
 {% set version = "0.6" %}
+{% python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -20,10 +21,11 @@ requirements:
     - pip
     - setuptools
     - setuptools_scm
+    - wheel
   run:
     - python >={{ python_min }}
-    - jaxtyping ==0.2.19
-    - pytorch >=1.11
+    - jaxtyping
+    - pytorch >=2.0
     - scipy
     - mpmath >=0.19,<=1.3
 
