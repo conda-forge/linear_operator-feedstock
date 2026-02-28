@@ -1,5 +1,5 @@
 {% set name = "linear_operator" %}
-{% set version = "0.6" %}
+{% set version = "0.6.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a9e2663879f1a2b28631bf7ef34892c4e5749893e711c8ef0ab0a39aff70a654
+  sha256: 3fba49a8080d16f822a5d870f462279cd6afbcf4ed670f4511b38fad96f61831
 
 build:
   noarch: python
